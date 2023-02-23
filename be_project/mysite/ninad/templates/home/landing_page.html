@@ -1,0 +1,154 @@
+<{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!--Import Google Icon Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+        #section1 {
+            background-image: url({% static 'img/SL.jpg'%});
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+
+
+<body style="font-family: 'Abril Fatface', cursive;" class="black" >
+
+<!-- NAVBAR -->
+
+<nav class="black">
+    <div class="container">
+        <div class="nav-wrapper  ">
+
+            <a href="#" class="brand-logo white-text">NINAD</a>
+
+        </div>
+    </div>
+</nav>
+<!-- navbar end-->
+<section id="section1">
+    <div class="container  light-blue-text text-lighten-4 ">
+        <br>
+        <br>
+        <h1>
+            Music For </h1>
+        <h1>
+            Everyone
+        </h1>
+        <h4>
+            Learn music at your own pace
+        </h4>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </div>
+</section>
+
+<div class="container white-text ">
+    <h1>
+        Features
+    </h1>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col s4">
+
+            <a href="{% url 'pitch_detector' %}" class="waves-effect waves-light btn-large ">Pitch Detection</a>
+        </div>
+
+        <div class="col s4">
+
+            <a href="{% url 'tanpura' %}" class="waves-effect waves-light btn-large">Tanpura</a>
+        </div>
+        <div class="col s4">
+
+            <a href="{% url 'raga_api' %}" class="waves-effect waves-light btn-large">Raga API</a>
+        </div>
+
+    </div>
+
+
+</div>
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<section >
+    <div class="container white-text ">
+
+        <h3>Read More</h3>
+       <br>
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="card ">
+                    <div class="card-image  responsive-img">
+                        <img src="{% static 'img/man-plays-drums-background-colored-lights_169016-3427.jpg' %}">
+                        <span class="card-title">Card Title</span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image  responsive-img">
+                        <img src="{% static 'img/people-raising-hands-concert_249578-737.jpg' %}">
+                        <span class="card-title">Card Title</span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card ">
+                    <div class="card-image  responsive-img">
+                        <img src="{% static 'img/man-plays-drums-background-colored-lights_169016-3427.jpg' %}">
+                        <span class="card-title">Card Title</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{#<a >PITCH DETECTOR</a><br>#}
+{#<a >TANPURA</a><br>#}
+{#<a>RAGA INFO</a><br>#}
+
+<!--JavaScript at end of body for optimized loading-->
+
+<script type="text/javascript" src="js/materialize.min.js"></script>
+
+</body>
+</html>

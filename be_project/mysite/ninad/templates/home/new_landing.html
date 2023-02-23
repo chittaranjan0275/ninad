@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!--Import Google Icon Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Title</title>
+</head>
+<body>
+
+<nav class="black">
+    <div class="container nav-wrapper">
+        <a href="#!" class="brand-logo">Ninad</a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="sass.html"><i class="material-icons">search</i></a></li>
+            <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
+            <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
+            <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
+        </ul>
+    </div>
+</nav>
+<div style="background: black">
+    <video id="vid" class="responsive-video" autoplay muted loop>
+        <source height="50" src="{% static '/PianoMusicVidee.mp4' %}" type="video/mp4">
+    </video>
+</div>
+<div style="background: rgb(0,0,0);
+background: linear-gradient(170deg, rgba(0,0,0,1) 0%, rgba(20,13,59,1) 70%, rgba(53,8,70,1) 100%);">
+
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            {% for raga in RagaDB_table %}
+                <div class="col s12 m6 l3">
+                    <h3>
+                    <span class="card-title"> <a
+                            href="{% url 'raga_details' slug=raga.link_slug %}">{{ raga.name }}</a></span>
+                    </h3>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class=" white-text center ">
+            <h1>
+                Features
+            </h1>
+
+            <div class="row">
+                <div class="col s4 ">
+                    <a href="{% url 'pitch_detector' %}" class="waves-effect waves-light btn-large ">
+                        Pitch Detector</a>
+                </div>
+                <div class="col s4 ">
+                    <a href="{% url 'tanpura' %}" class="waves-effect waves-light btn-large">Tanpura</a>
+                </div>
+                <div class="col s4 ">
+                    <a href="{% url 'raga_api' %}" class="waves-effect waves-light btn-large">Ragas information</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br><br>
+        <br><br>
+    </div>
+    <img class="responsive-img" style="margin: 0%" src={% static 'img/img.png' %}>
+    <img class="responsive-img" style="margin: 0%" src={% static 'img/img_1.png' %}>
+</div>
+
+
+<footer class="page-footer black">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
+                    content.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright black">
+        <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+    </div>
+</footer>
+
+
+<script>  document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('.slider');
+    var instances = M.Slider.init(elems, options);
+});
+
+// Or with jQuery
+
+$(document).ready(function () {
+    $('.slider').slider();
+});
+
+
+</script>
+
+
+</body>
+</html>
+
+

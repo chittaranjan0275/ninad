@@ -1,0 +1,283 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+    <title>Audio</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+<div class="main">
+
+    <div class="parent">
+
+        <div class="child131">
+            <div class="child1311">
+                <a onclick="playA()">A
+                    <audio id="audioA" src="{% static "/tanpura_music/A-tanpura.mp3" %}"></audio>
+                </a>
+            </div>
+            <div class="child1311">
+                <a onclick="playA_sharp()">A#
+                    <audio id="audioA#" src="{% static "/tanpura_music/A_sharp_tanpura.mp3" %}"></audio>
+                </a>
+
+            </div>
+            <div class="child1311">
+                <a onclick="playB()">B
+                    <audio id="audioB" src="{% static "/tanpura_music/B-tanpura.mp3" %}"></audio>
+                </a>
+            </div>
+        </div>
+
+        <div class="child131">
+            <div class="child1311">
+                <a onclick="playC()">C
+                    <audio id="audioC" src="{% static "/tanpura_music/C-tanpura.mp3" %}"></audio>
+                </a>
+            </div>
+            <div class="child1311">
+                <a onclick="playC_sharp()">C#
+                    <audio id="audioC#" src="{% static "/tanpura_music/C_sharp_tanpura.mp3" %}"></audio>
+                </a>
+            </div>
+            <div class="child1311">
+                <a onclick="playD()">D
+                    <audio id="audioD" src="{% static "/tanpura_music/D-tanpura.mp3" %}"></audio>
+                </a>
+            </div>
+        </div>
+
+        <div class="child131">
+            <div class="child1311">
+                <a onclick="playD_sharp()">D#
+                    <audio id="audioD#" src="{% static "/tanpura_music/D_sharp_tanpura.mp3" %}"></audio>
+                </a>
+            </div>
+            <div class="child1311">
+                <a onclick="playE()">E
+                    <audio id="audioE" src="{% static "/tanpura_music/E-tanpura.mp3" %}"></audio>
+                </a>
+            </div>
+            <div class="child1311">
+                <a onclick="playF()">F
+                    <audio id="audioF" src="{% static "/tanpura_music/F-tanpura.mp3" %}"></audio>
+                </a>
+            </div>
+        </div>
+
+        <div class="child131">
+            <div class="child1311">
+                <a onclick="playF_sharp()">F#
+                    <audio id="audioF#" src="{% static "/tanpura_music/F_sharp_tanpura.mp3" %}"></audio>
+                </a>
+            </div>
+            <div class="child1311">
+                <a onclick="playG()">G
+                    <audio id="audioG" src="{% static "/tanpura_music/G-tanpura.mp3" %}"></audio>
+                </a></div>
+            <div class="child1311">
+                <a onclick="playG_sharp()">G#
+                    <audio id="audioG#" src="{% static "/tanpura_music/G_sharp_tanpura.mp3" %}"></audio>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+    var audio = document.getElementById("audioA");
+var audio1 = document.getElementById("audioA#");
+var audio2 = document.getElementById("audioB");
+var audio3 = document.getElementById("audioC");
+var audio4 = document.getElementById("audioC#");
+var audio5 = document.getElementById("audioD");
+var audio6 = document.getElementById("audioD#");
+var audio7 = document.getElementById("audioE");
+var audio8 = document.getElementById("audioF");
+var audio9 = document.getElementById("audioF#");
+var audio10 = document.getElementById("audioG");
+var audio11 = document.getElementById("audioG#");
+
+function stop_all() {
+    audio.pause();
+    audio1.pause();
+    audio2.pause();
+    audio3.pause();
+    audio4.pause();
+    audio5.pause();
+    audio6.pause();
+    audio7.pause();
+    audio8.pause();
+    audio9.pause();
+    audio10.pause();
+    audio11.pause();
+}
+
+var boolA = false;
+var boolA_sharp = false;
+var boolB = false;
+var boolC = false;
+var boolC_sharp = false;
+var boolD = false;
+var boolD_sharp = false;
+var boolE = false;
+var boolF = false;
+var boolF_sharp = false;
+var boolG = false;
+var boolG_sharp = false;
+
+function playA() {
+    stop_all();
+    var audio = document.getElementById("audioA");
+    if (!boolA) {
+        audio.play();
+        boolA = true;
+        console.log("Play A true");
+    } else {
+        audio.pause();
+        boolA = false;
+        console.log("Play A true");
+    }
+
+}
+
+function playA_sharp() {
+    stop_all();
+    var audio = document.getElementById("audioA#");
+    if (!boolA_sharp) {
+        audio.play();
+        boolA_sharp = true;
+    } else {
+        audio.pause();
+        boolA_sharp = false;
+    }
+}
+
+function playB() {
+    stop_all();
+    var audio = document.getElementById("audioB");
+        if (!boolB) {
+        audio.play();
+        boolB = true;
+    } else {
+        audio.pause();
+        boolB = false;
+    }
+}
+
+function playC() {
+    stop_all();
+    var audio = document.getElementById("audioC");
+        if (!boolC_sharp) {
+        audio.play();
+        boolC_sharp = true;
+    } else {
+        audio.pause();
+        boolC_sharp = false;
+    }
+}
+
+function playC_sharp() {
+    stop_all();
+    var audio = document.getElementById("audioC#");
+        if (!boolC_sharp) {
+        audio.play();
+        boolC_sharp = true;
+    } else {
+        audio.pause();
+        boolC_sharp = false;
+    }
+}
+
+function playD() {
+    stop_all();
+    var audio = document.getElementById("audioD");
+        if (!boolD) {
+        audio.play();
+        boolD = true;
+    } else {
+        audio.pause();
+        boolD = false;
+    }
+}
+
+function playD_sharp() {
+    stop_all();
+    var audio = document.getElementById("audioD#");
+        if (!boolD_sharp) {
+        audio.play();
+        boolD_sharp = true;
+    } else {
+        audio.pause();
+        boolD_sharp = false;
+    }
+}
+
+function playE() {
+    stop_all();
+    var audio = document.getElementById("audioE");
+        if (!boolE) {
+        audio.play();
+        boolE = true;
+    } else {
+        audio.pause();
+        boolE = false;
+    }
+}
+
+function playF() {
+    stop_all();
+    var audio = document.getElementById("audioF");
+       if (!boolF) {
+        audio.play();
+        boolF = true;
+    } else {
+        audio.pause();
+        boolF = false;
+    }
+}
+
+function playF_sharp() {
+    stop_all();
+    var audio = document.getElementById("audioF#");
+        if (!boolF_sharp) {
+        audio.play();
+        boolF_sharp = true;
+    } else {
+        audio.pause();
+        boolF_sharp = false;
+    }
+}
+
+function playG() {
+    stop_all();
+    var audio = document.getElementById("audioG");
+        if (!boolG) {
+        audio.play();
+        boolG = true;
+    } else {
+        audio.pause();
+        boolG = false;
+    }
+}
+
+function playG_sharp() {
+    stop_all();
+    var audio = document.getElementById("audioG#");
+        if (!boolG_sharp) {
+        audio.play();
+        boolG_sharp = true;
+    } else {
+        audio.pause();
+        boolG_sharp = false;
+    }
+}
+
+</script>
+
+</body>
+</html>
